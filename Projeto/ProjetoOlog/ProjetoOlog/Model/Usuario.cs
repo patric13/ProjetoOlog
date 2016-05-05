@@ -8,7 +8,20 @@ namespace ProjetoOlog.Model
 {
     public class Usuario
     {
-        public string Nome { get; set; }
+        public string email { get; set; }
+        public string senha { get; set; }
+
+        public Usuario(String email, String senha)
+        {
+            this.email = email;
+            this.senha = senha;
+            
+
+        }
+        public Usuario()
+        {
+
+        }
 
     }
 }

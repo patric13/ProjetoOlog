@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoOlog.Controller;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace ProjetoOlog
     /// </summary>
     public sealed partial class TransmissaoView : Page
     {
+        ControladorTransmissao transmissao;
         bool Transmitindo;
         public TransmissaoView()
         {

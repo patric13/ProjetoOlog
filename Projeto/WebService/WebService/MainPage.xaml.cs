@@ -1,5 +1,4 @@
-﻿using ProjetoOlog.Controller;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,22 +15,18 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
-namespace ProjetoOlog
+namespace WebService
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        LoginController controlador;
-
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
-
-            controlador = new LoginController();
         }
 
         /// <summary>
@@ -48,24 +43,6 @@ namespace ProjetoOlog
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
-        }
-        
-
-        private void RealizarLogin(string usuario, string senha)
-        {
-
-            if (usuario != "" && senha != "")
-                controlador.RealizarLogin(usuario, senha);
-            else
-            {
-                //retornar mensagem de erro;
-                return;
-            }
-        }
-        
-        private void btnLoginClick(object sender, RoutedEventArgs e)
-        {
-            RealizarLogin(txtUsuario.Text, passwordBox.Password);
         }
     }
 }
